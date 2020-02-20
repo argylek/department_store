@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+
+10.times do
+  Department.create(name:Faker::Artist.name)
+end
+# Department.create(name: blah)
+
+# 10.times do
+#   sub = Sub.create(name:Faker::Artist.name)
+#   15.times do
+#     sub.topics.create(name:Faker::Movies::StarWars.character, body:Faker::GreekPhilosophers.quote)
+#   end
+#
+# end
