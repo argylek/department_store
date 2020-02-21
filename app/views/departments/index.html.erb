@@ -2,7 +2,7 @@
 <%= link_to 'Create new Department', new_department_path %>
 <% @departments.each do |department|%>
   <h2> <%= department.name %> </h2>
-  <%= link_to "View", department %>
+  <%= link_to "View", department_items_path(department) %>
   <%= link_to "Edit", edit_department_path(department) %>
   <%= link_to "Delete", department_path(department), method: :delete %>
 <% end %>

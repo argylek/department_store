@@ -9,7 +9,10 @@ require 'faker'
 
 
 10.times do
-  Department.create(name:Faker::Artist.name)
+  department = Department.create(name:Faker::Artist.name)
+  12.times do
+    department.items.create(name:Faker::Food.dish, description:Faker::Food.description)
+  end
 end
 # Department.create(name: blah)
 
@@ -18,5 +21,5 @@ end
 #   15.times do
 #     sub.topics.create(name:Faker::Movies::StarWars.character, body:Faker::GreekPhilosophers.quote)
 #   end
-#
+
 # end

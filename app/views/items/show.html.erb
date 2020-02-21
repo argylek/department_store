@@ -1,2 +1,7 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<h1>Name: <%= @item.name%></h1>
+<h3>Item Description: </h3>
+<h4><%= @item.description %> </h4>
+
+<p>This is from the <%= @department.name %> department </p>
+<%= link_to "Edit", edit_department_item_path(@department, @item) %>
+<%= link_to "Go Back", department_items_path %>
